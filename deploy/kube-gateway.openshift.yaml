@@ -96,7 +96,7 @@ spec:
           value: "false"
         - name: LISTEN
           value: https://0.0.0.0:8080
-        image: quay.io/yaacov/kube-gateway
+        image: quay.io/rh-fieldwork/kube-gateway
         name: kube-gateway
         ports:
         - containerPort: 8080
@@ -114,7 +114,7 @@ spec:
         - -r
         - /data/web/public
         - /app/web/
-        image: quay.io/yaacov/kube-gateway-web-app-novnc
+        image: quay.io/rh-fieldwork/kube-gateway-web-app-novnc
         name: kube-gateway-web-app
         volumeMounts:
         - mountPath: /app/web

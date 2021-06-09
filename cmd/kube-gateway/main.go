@@ -10,8 +10,8 @@ import (
 
 	"golang.org/x/oauth2"
 
-	"github.com/yaacov/kube-gateway/pkg/gatetoken"
-	"github.com/yaacov/kube-gateway/pkg/proxy"
+	"github.com/rh-fieldwork/kube-gateway/pkg/gatetoken"
+	"github.com/rh-fieldwork/kube-gateway/pkg/proxy"
 )
 
 const (

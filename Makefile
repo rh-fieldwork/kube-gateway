@@ -1,7 +1,7 @@
 SOURCE := cmd/kube-gateway/*.go pkg/proxy/*.go
-IMG ?= quay.io/yaacov/kube-gateway
-IMG_WEB_APP_NOVNC ?= quay.io/yaacov/kube-gateway-web-app-novnc
-IMG_WEB_APP ?= quay.io/yaacov/kube-gateway-web-app
+IMG ?= quay.io/rh-fieldwork/kube-gateway
+IMG_WEB_APP_NOVNC ?= quay.io/rh-fieldwork/kube-gateway-web-app-novnc
+IMG_WEB_APP ?= quay.io/rh-fieldwork/kube-gateway-web-app
 
 all: kube-gateway
 
@@ -37,18 +37,18 @@ novnc:
 
 .PHONY: image
 image:
-	podman build -t quay.io/yaacov/kube-gateway .
-	podman push quay.io/yaacov/kube-gateway
+	podman build -t ${IMG} .
+	podman push ${IMG}
 
 .PHONY: image-web-app
 image-web-app:
-	podman build -t quay.io/yaacov/kube-gateway-web-app -f web-app.Dockerfile .
-	podman push quay.io/yaacov/kube-gateway-web-app
+	podman build -t ${IMG_WEB_APP} -f web-app.Dockerfile .
+	podman push ${IMG_WEB_APP}
 
 .PHONY: image-web-app-novnc
 image-web-app-novnc:
-	podman build -t quay.io/yaacov/kube-gateway-web-app-novnc -f web-app-noVNC.Dockerfile .
-	podman push quay.io/yaacov/kube-gateway-web-app-novnc
+	podman build -t ${IMG_WEB_APP_NOVNC} -f web-app-noVNC.Dockerfile .
+	podman push ${IMG_WEB_APP_NOVNC}
 
 .PHONY: deploy-dir
 deploy-dir:
