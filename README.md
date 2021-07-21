@@ -25,29 +25,29 @@ go install github.com/rh-fieldwork/kube-gateway/cmd/kube-gateway
 
 ## What can I do with it ?
 
-- Create web applications that use k8s API securly.
-- Use temporary JWT keys to access k8s API.
-- Use OAuth2 Issuer to access k8s API.
-- Use k8s service account tokens to access k8s API.
+- Create web applications that use k8s API securly
+- Use temporary JWT keys to access k8s API
+- Use OAuth2 Issuer to access k8s API
+- Use k8s service account tokens to access k8s API
 
-### Demo: use JWT access key to none-interactivly login into a k8s web application
+### Demo: use JWT access key to non-interactively log into a k8s web application
 
 Deploy the noVNC web application on a minikube cluster.
-Use admin token to generate a JWT that can access a kubevirt virtuall machine for 1h.
-Use the JWT access key to login into the noVNC web application.
+Use admin token to generate a JWT that can access a kubevirt virtual machine for 1h.
+Use the JWT access key to log into the noVNC web application.
 
 ![alt demo gif](https://raw.githubusercontent.com/rh-fieldwork/kube-gateway/main/web/public/novnc.gif)
 
-### Demo: use OAuth2 Issuer to interactivly login into a k8s web application
+### Demo: use OAuth2 Issuer to interactively login into a k8s web application
 
 Deploy the demo web application on a CRC cluster.
-Use OAuth2 Issuer to login into the demo web application.
+Use OAuth2 Issuer to log into the demo web application.
 
 ![alt demo gif](https://raw.githubusercontent.com/rh-fieldwork/kube-gateway/main/web/public/oauth.gif)
 
 ## Deploy
 
-See deployment examples for minikube and code-ready-containrs in [deploy](https://github.com/rh-fieldwork/kube-gateway/tree/main/deploy) 
+See deployment examples for minikube and code-ready-containers in [deploy](https://github.com/rh-fieldwork/kube-gateway/tree/main/deploy) 
 
 ``` bash
 git clone git@github.com:rh-fieldwork/kube-gateway.git
