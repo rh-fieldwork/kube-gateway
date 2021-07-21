@@ -1,5 +1,5 @@
 # build stage
-FROM golang:1.15 AS build
+FROM registry.access.redhat.com/ubi8/go-toolset:latest AS build
 
 WORKDIR /app
 COPY . .
@@ -7,7 +7,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -o /app/ /app/cmd/kube-gateway/... 
 
 # deploy stage
-FROM alpine
+FROM registry.access.redhat.com/ubi8/ubi-minimal:latest
 
 WORKDIR /app
 RUN mkdir -p /app/web/public/
