@@ -13,10 +13,7 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
-web/public/noVNC
 
 .vscode
 *.crt
-*.pem
-test/token
-kube-gateway
+*.key
